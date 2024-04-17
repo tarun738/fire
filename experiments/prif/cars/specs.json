@@ -1,0 +1,59 @@
+{
+  "Description" : [ "PRIF. Cars Prior" ],
+  "DataSource" : "dataSph",
+  "ShapeNetSDF" : "DeepSDFData/SdfSamples/ShapeNet",
+  "ShapeNetMeshSource" : "ShapeNetCore.v2",
+  "ShapeNetImgSource" : "dvr",
+  "TrainSplit" : "experiments/splits/sv2_car_train.json",
+  "TestSplit" : "experiments/splits/sv2_car_test.json",
+  "NetworkArchPoints" : "prifddf",
+  "NetworkSpecsPoints" : {
+    "last_dim": 2
+    },
+  "NetworkArchDirs" : null,
+  "NetworkSpecsDirs": null,
+  "generalpreprocessing" : true,
+  "missingDirs" : true,
+  "tvlregfeats": true,	
+  "tvlregweight": 1e2,				
+  "tvlregweightddf": 0.0,				
+  "CodeLength" : 256,
+  "NumEpochs" : 3001,
+  "SnapshotFrequency" : 500,
+  "validationFreq" : 20000,
+  "sdfLossWeight" : 0.0,
+  "sdf_ddf_const_wt": 0.0,
+  "ddf_loss_wt": 1.0,
+  "detach_ddf_sdf": true,
+  "sdf_ddf_const_train": false,
+  "loadDataToRam" : true,
+  "noHitMiss": true,
+  "AdditionalSnapshots" : [ ],
+  "LearningRateSchedule" : [
+    {
+      "Type" : "Step",
+      "Initial" : 0.0005,
+      "Interval" : 750,
+      "Factor" : 0.5
+    },
+    {
+      "Type" : "Step",
+      "Initial" : 0.001,
+      "Interval" : 750,
+      "Factor" : 0.5
+    },
+    {
+      "Type" : "Step",
+      "Initial" : 0.0001,
+      "Interval" : 750,
+      "Factor" : 0.5
+    }],
+  "SamplesPerScene" : 4096,
+  "numDataSamplesPerScene" : 1000000,
+  "ScenesPerBatch" : 64,
+  "DataLoaderThreads" : 8,
+  "ClampingDistance" : 2.0,
+  "CodeRegularization" : true,
+  "CodeRegularizationLambda" : 1e-4,
+  "CodeBound" : 1.0
+}
