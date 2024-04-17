@@ -1,6 +1,7 @@
 # FIRe: Fast Inverse Rendering using Directional and Signed Distance Functions
 # WACV 2024
 [Arxiv](https://arxiv.org/abs/2203.16284)
+![Teaser](fig/teaser.png)
 
 This project is the official implementation our work, FIRe. Much of our code is from [DeepSDF's](https://github.com/facebookresearch/DeepSDF), and i3DMM's repositories. We thank Park et al. for making their code publicly available.
 
@@ -64,9 +65,9 @@ When working with a large dataset, use the batch_split argument. To continue fro
 
 ### Infering from the model and evaluations
 
-To fit the model to depth maps from the ShapeNet dataset given a splits file:
+To fit the model to single view depth maps or silhouettes:
 ```
-python infer_fire.py -e experiments/ours/<experiment name> -c latest -d dataSph --imW 512 --imH 512 -t 0.009 --rc fit -s experiments/splits/<splits file>   --fitTo [silhouette or depth] --fitDIST --meshThresh 0.001
+python infer_fire.py -e experiments/ours/<experiment name> -c latest -d dataSph --imW 512 --imH 512 -t 0.009 --rc fit -s experiments/splits/<splits file>  --fitTo [silhouette or depth] --fitDIST --meshThresh 0.001
 ```
 
 
