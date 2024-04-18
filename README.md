@@ -1,11 +1,11 @@
 # FIRe: Fast Inverse Rendering using Directional and Signed Distance Functions
 # WACV 2024
-[Arxiv](https://arxiv.org/abs/2203.16284)
+[Arxiv](https://arxiv.org/abs/2203.16284), [Project Page] (https://cvg.cit.tum.de/research/geometry/fire)
 ![Teaser](fig/teaser.png)
 
 This project is the official implementation our work, FIRe. Much of our code is from [DeepSDF's](https://github.com/facebookresearch/DeepSDF), and i3DMM's repositories. We thank Park et al. for making their code publicly available.
 
-The pretrained models can be downloaded [here](#).
+The pretrained models can be downloaded [here](https://drive.google.com/drive/folders/1ujCAxTQl4FUJvHuI2yBtT4dzfz28YxMl?usp=sharing). Download them and extract them to our [experiments/ours] (experiments/ours) folder.
 
 ### Setup
 1. To get started, clone this repository into a local directory.
